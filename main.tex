@@ -1,0 +1,92 @@
+
+\documentclass{article}
+ 
+\setlength{\parindent}{0em}
+\setlength{\parskip}{1em}
+\title{Proof of Concept - Elaboration}
+\author{Osmond Chiu}
+
+
+\begin{document}
+\maketitle
+\section*{Planned Thesis Topic}
+
+My planned thesis research will be inductive research that aims to understand re-nationalisations in Australia. Re-nationalisations are when privatised government functions are brought back under public ownership.\par
+The aim is to work out why these re-nationalisations occurred through compiling a list of re-nationalisations to identify common factors and examining key case studies.
+
+\section*{Computational Analysis}
+\subsection*{Decomposing}
+There are a range of discrete tasks for this job. It will involve breaking down into:
+\begin{itemize}
+    \item defining what data needs to be collected
+    \item determining the available resources to conduct the research
+    \item conducting the research
+    \item collecting the data
+    \item organising the collected data
+    \item analysing the collected data
+    \item determining if the process needs to be repeated
+\end{itemize}
+
+\subsection*{Pattern Recognition}
+There will be some recurring patterns in how I organise the collected data including metadata and tagging sources.\par
+
+\subsection*{Algorithm}
+Step-by-step, this job would likely involve:
+\begin{enumerate}
+\item Defining the research aim
+\item Determining parameters such as time period, location and keywords for research
+\item Identifying available sources and databases
+\item Researching what tools interact with those sources and databases
+\item Testing the tools
+\item Using the tool, if it works
+\item Saving sources
+\item Producing metadata
+\item Organising sources
+\item Analysing sources
+\item Deciding if the process needs to be repeated because the research aim is not met
+\end{enumerate}
+
+\section*{Elaboration}
+
+There are a range of technologies that could help deliver the step-by-step requirements listed in my algorithm.
+
+\subsection*{Requirements}
+
+Of the steps outlined, the following steps could be improved with tools:
+\begin{itemize}
+\item Using the tool to interact with sources and databases
+\item Saving sources
+\item Producing metadata
+\item organising saved sources.
+\end{itemize}\par
+
+The requirement for the first step are tools that can conduct a search for different keywords in documents as the term "re-nationalisation" is not always used. The sources are most likely to primarily be newspaper articles.\par
+Other requirements are that the tool has exportable metadata that includes keywords used and where the data is from, and can save the sources using a defined naming structure.
+\par
+Requirements for organising sources might be a tool to tag and keep notes for each source Without having to re-read sources, enabling a de facto annotated bibliography.
+\par
+
+\subsection*{Delivery}
+
+The first requirement can be met by using a tool to capture newspaper articles about examples of re-nationalisation in Australia from online archives.\par
+
+The use of Application Programming Interfaces to conduct searches may be the best way to deliver that requirement. An API that could conduct searches on Trove, Factiva and ProQuest Australia and New Zealand Newsstream, narrowed to specific keywords in text and Australian newspaper sources.\par
+It may require writing some custom script to use the APIs to capture sources, export them and associated metadata.\par 
+There are some existing tools that can be used, for example, a Trove API console available at \begin{verbatim}https://troveconsole.herokuapp.com/\end{verbatim} There is also a script for a Trove Newspaper Harvest using Python exists at \begin{verbatim} http://timsherratt.org/digital-heritage-handbook/docs/trove-newspaper-harvester/\end{verbatim}
+
+The second requirement could be met by using a bibliographic software that could organise, collect and keep information on sources. There are a range of options including Zotero or Endnote that could be explored.\par
+
+\subsection*{Mitigating risks}
+
+There are risks with data collection, for example, it is not immediately clear that some resources can use APIs such as Google Scholar. Identifying what resources have APIs that may be useful should be done first to know how much work must be done.\par
+There may be other difficulties automating. Terms and Conditions of ProQuest and Factiva, which is what would be useful for more recent newspaper articles states that users shall not text mine or data mine. This information is at \begin{verbatim}https://libguides.mq.edu.au/textdatamining/publisher_resources\end{verbatim}
+I might not be able to write the custom script in time needed to use the API and different scripts may be needed for different APIs. It is likely that others have tried similar searches so it would be prudent to search from existing codes if it exists online.\par
+For some sites such as Trove, if I still am having problems, I could use try alternatives if there are problems such as with an Excel spreadsheet as shown at \begin{verbatim} https://stumblingfuture.wordpress.com/2014/03/13/using-the-trove-api-with-excel-spreadsheets/ \end{verbatim}\par
+
+There may not be an easy method of automating the exporting of metadata and a naming structure for saved sources using those APIs or in an organised or useful manner. It should be tested first and tweaked to avoid generating metadata and files which then need to be organised.\par
+
+Finally, the risk may be that the tool does not find much information meaning it may have been a waste of time.\par
+
+For using bibliographic software, a key risk is not all software having the same features. An incorrect choice could lead to a problem whereby a feature is not available, resulting in more work. It will be important to search for information comparing the features of different software and test the software for likely needs such as tagging and annotating sources.\par
+
+\end{document}
